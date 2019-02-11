@@ -54,6 +54,7 @@ export default {
         animation-delay: 1s;
         animation-fill-mode: backwards;
         transform-origin: center;
+        margin: 3px;
 
         &:nth-child(2) {
             animation-delay: 1.1s;

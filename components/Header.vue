@@ -30,6 +30,7 @@ export default {}
         position: absolute;
         top: 50%;
         left: 10%;
+        padding: 20px;
         transform: translateY(-50%);
         @keyframes fade {
             0% {

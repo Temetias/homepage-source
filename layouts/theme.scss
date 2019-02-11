@@ -1,8 +1,8 @@
 // Colors.
-$theme-blue: rgb(150, 0, 0);
+$theme-dark-red: rgb(150, 0, 0);
 $theme-red: rgb(240, 54, 29);
 $theme-white: rgb(225, 226, 238);
-$theme-gray: rgb(170, 170, 185);
+$theme-gray: rgb(87, 87, 90);
 $theme-darkgray: rgb(56, 52, 52);
 $theme-black: rgb(27, 27, 31);
 
@@ -37,6 +37,6 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, span {
 	font-family: $theme-font;
 }

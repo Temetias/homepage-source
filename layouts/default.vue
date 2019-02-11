@@ -37,12 +37,13 @@ export default {
 	height: 100vh;
 	width: 60px;
 	padding: 5px;
-	background-color: $theme-blue;
+	background-color: $theme-dark-red;
 	box-shadow: $theme-shadow;
 	@media only screen and (max-width: $break-small) {
 		width: 100vw;
 		height: 50px;
 	}
+	z-index: 1;
 }
 
 #content {
@@ -57,5 +58,6 @@ export default {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 2;
 }
 </style>
