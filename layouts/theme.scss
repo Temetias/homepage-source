@@ -1,0 +1,42 @@
+// Colors.
+$theme-blue: rgb(150, 0, 0);
+$theme-red: rgb(240, 54, 29);
+$theme-white: rgb(225, 226, 238);
+$theme-gray: rgb(170, 170, 185);
+$theme-darkgray: rgb(56, 52, 52);
+$theme-black: rgb(27, 27, 31);
+
+// Breakpoints.
+$break-small: 500px;
+
+// Misc.
+$theme-shadow: 2px 2px 2px 0px rgba(0, 0, 0, .4);
+
+// Fonts
+$theme-font: 'Signika', sans-serif;
+
+// Defaults.
+html {
+	font-size: 16px;
+	word-spacing: 1px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	background-color: $theme-white;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+	font-family: $theme-font;
+}
