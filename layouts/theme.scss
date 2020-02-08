@@ -1,6 +1,8 @@
 // Colors /////
 $theme-bg-color: black;
+$theme-bg-color-alt: rgb(44, 43, 49);
 $theme-color: white;
+$theme-color-alt: rgb(142, 153, 179);
 
 // Fonts //////
 $theme-font: 'Roboto', sans-serif;
@@ -28,6 +30,16 @@ body {
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, p, span {
+h1, h2, h3, h4, h5, p, span, a {
+	color: $theme-color;
 	font-family: $theme-font;
+}
+
+a {
+	color: $theme-color-alt;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }

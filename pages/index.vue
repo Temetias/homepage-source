@@ -1,11 +1,10 @@
 <template>
-	<div class="main">
-		<header id="lander">
+	<main>
+		<header>
 			<Logo class="index-logo"/>
-			<h2>Hello.</h2>
-			<h2>My name is Teemu Karppinen. I'm a full stack developer.</h2>
+			<h2>Hello world.</h2>
 		</header>
-	</div>
+	</main>
 </template>
 
 <script>

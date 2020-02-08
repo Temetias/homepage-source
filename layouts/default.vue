@@ -1,6 +1,6 @@
 <template>
 	<div class="layout">
-		<Header />
+		<Header class="layout__header" />
 		<nuxt />
 		<Footer class="layout__footer"/>
 	</div>
@@ -26,12 +26,16 @@ export default {
 	position: relative;
 	min-height: 100vh;
 	
+	&__header {
+		background-color: $theme-bg-color-alt;
+	}
+
 	&__footer {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		left: 0;
+		background-color: $theme-bg-color-alt;
 	}
 }
-
 </style>
