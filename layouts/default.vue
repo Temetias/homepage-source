@@ -1,8 +1,13 @@
 <template>
 	<div class="layout">
 		<Header class="layout__header" />
-		<nuxt />
-		<Footer class="layout__footer"/>
+		<div class="layout__content content"
+			id="main-content">
+			<div class="content__wrap">
+				<nuxt />
+			</div>
+			<Footer class="content__footer"/>
+		</div>
 	</div>
 </template>
 
@@ -24,17 +29,21 @@ export default {
 
 .layout {
 	position: relative;
-	min-height: 100vh;
-	
+
 	&__header {
-		background-color: $theme-bg-color-alt;
+		height: 60px;
+	}
+}
+
+.content {
+	height: calc(100vh - 60px);
+	overflow-y: scroll;
+
+	&__wrap {
+		padding: 2rem;
 	}
 
 	&__footer {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
 		background-color: $theme-bg-color-alt;
 	}
 }

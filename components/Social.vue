@@ -1,6 +1,7 @@
 <template>
 	<div class="social">
-		<a :href="path">
+		<a class="no-underline"
+			:href="path">
 			<i :class="iconClass"></i>
 		</a>
 	</div>

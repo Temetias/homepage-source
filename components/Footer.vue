@@ -22,7 +22,8 @@
 				title="zoomtimmy - Instagram"
 			/>
 		</div>
-	</footer>	
+		<span class="copyright">© 2020 Teemu Karppinen</span>
+	</footer>
 </template>
 
 <script>
@@ -38,7 +39,9 @@ export default {
 <style lang="scss" scoped>
 .footer {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .socials {

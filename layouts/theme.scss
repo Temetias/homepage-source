@@ -5,7 +5,7 @@ $theme-color: white;
 $theme-color-alt: rgb(142, 153, 179);
 
 // Fonts //////
-$theme-font: 'Roboto', sans-serif;
+$theme-font: 'Exo 2', sans-serif;
 
 // Theme //////
 html {
@@ -28,6 +28,7 @@ html {
 
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, p, span, a {
@@ -35,11 +36,51 @@ h1, h2, h3, h4, h5, p, span, a {
 	font-family: $theme-font;
 }
 
+p {
+	margin: 2rem 0;
+}
+
 a {
 	color: $theme-color-alt;
 	text-decoration: none;
+	position: relative;
+
+	&::after, &::before {
+		display: block;
+		content: " ";
+		position: absolute;
+		width: 50%;
+		bottom: 0;
+		height: 2px;
+		background-color: $theme-color-alt;
+		transform: scaleX(0);
+		transition: transform .15s;
+	}
+
+	&::before {
+		right: 49%;
+		transform-origin: right;
+	}
+
+	&::after {
+		left: 49%;
+		transform-origin: left;
+	}
 
 	&:hover {
-		text-decoration: underline;
+
+		&::after, &::before {
+			transform: scaleX(1);
+		}
 	}
+}
+
+a.no-underline {
+	&::before, &::after {
+		display: none;
+	}
+}
+
+a.no-outline {
+	outline: none;
 }

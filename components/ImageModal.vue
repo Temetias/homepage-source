@@ -2,7 +2,7 @@
 	<div class="image-modal"
 		@click="$emit('close')">
 		<header class="image-modal__header"
-			@click.stop="">
+			@click.stop>
 			<h5>{{ title }}</h5>
 			<i class="fa fa-times"
 				@click="$emit('close')">
@@ -11,7 +11,7 @@
 		<img class="image-modal__displayer"
 			:src="src"
 			:alt="alt"
-			@click.stop=""
+			@click.stop
 		/>
 	</div>
 </template>

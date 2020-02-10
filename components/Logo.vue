@@ -1,13 +1,16 @@
 <template>
 	<div class="logo">
 		<svg class="svg"
-			viewBox="0 0 100 100"
+			viewBox="0 0 120 100"
 			xlmns="http://www.w3.org/2000/svg">
 			<polygon class="t"
-				points="0,0 100,0 100,10 45,10 45,100 35,100 35,10 0,10"
+				points="10,0 104,0 92,10 55,10 55,100 45,100 45,10 0,10"
 			/>
 			<polygon class="k"
-				points="100,12 60,60 100,100 86,100 46,60 86,12"
+				points="120,0 64,50 120,100 106,100 48,50 106,0"
+			/>
+			<polygon class="dash"
+				points="60,41 54,46 54,30 48,45 48,55 54,60 54,54 60,59"
 			/>
 		</svg>
 	</div>
@@ -28,10 +31,14 @@
 		width: 100%;
 		height: 100%;
 
-		.t, .k {
+		.t, .k, .dash {
 			fill: white;
 			stroke-width: 1;
 			stroke: gray;
+		}
+
+		.dash {
+			stroke: white;
 		}
 	}
 }
