@@ -17,6 +17,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "@/layouts/theme.scss";
+
 .logo {
 	position: relative;
 
@@ -32,13 +34,13 @@
 		height: 100%;
 
 		.t, .k, .dash {
-			fill: white;
+			fill: $logo-color;
 			stroke-width: 1;
-			stroke: gray;
+			stroke: $logo-color-alt;
 		}
 
 		.dash {
-			stroke: white;
+			stroke: $logo-color;
 		}
 	}
 }

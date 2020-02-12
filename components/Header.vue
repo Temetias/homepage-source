@@ -1,5 +1,6 @@
 <template>
-	<header class="header">
+	<header class="header"
+		:class="{ 'not-scrolled': scrollTrigger }">
 		<div class="
 			header__region
 			header__region--flip
@@ -54,6 +55,11 @@ export default {
 			this.lastScroll = target.scrollTop;
 		};
 	},
+	computed: {
+		scrollTrigger() {
+			return window.innerHeight / 3 > this.lastScroll;
+		}
+	}
 };
 </script>
 
@@ -67,7 +73,12 @@ $header-height: 60px;
 	justify-content: space-between;
 	align-items: center;
 	height: $header-height;
-	background-color: $theme-bg-color-alt;
+	color: $theme-color-alt;
+	transition: background-color .1s;
+
+	&.not-scrolled {
+		background-color: transparent;
+	}
 
 	.logo {
 		width: $header-height;

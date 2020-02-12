@@ -1,15 +1,20 @@
 // Colors /////
-$theme-bg-color: black;
-$theme-bg-color-alt: rgb(44, 43, 49);
-$theme-color: white;
-$theme-color-alt: rgb(142, 153, 179);
+$theme-bg-color: #272727;
+$theme-bg-color-2: #414141;
+$theme-bg-color-alt: #ffe400;
+$theme-bg-color-alt-2: #14a67c;
+$theme-bg-color-alt-3: #ff652f;
+$theme-color: #c1d4dd;
+$theme-color-alt: #ff652f;
+$logo-color: #ff652f;
+$logo-color-alt: #ffe400;
 
 // Fonts //////
 $theme-font: 'Exo 2', sans-serif;
 
 // Theme //////
 html {
-	font-size: 16px;
+	font-size: 20px;
 	word-spacing: 1px;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -37,7 +42,44 @@ h1, h2, h3, h4, h5, p, span, a {
 }
 
 p {
-	margin: 2rem 0;
+	position: relative;
+	margin: 10rem 0;
+	margin-left: 40vw;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&::after, &::before {
+		z-index: -10;
+		pointer-events: none;
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-color: $theme-bg-color-2;
+		margin: -2rem;
+		transform: rotate(1deg);
+	}
+	
+	&::before {
+		background-color: $theme-bg-color-alt-2;
+		transform: rotate(4deg) scale(1.01);
+	}
+
+	&:nth-child(odd) {
+		margin-left: 0;
+		margin-right: 40vw;
+
+		&::after {
+			transform: rotate(-1deg);
+		}
+
+		&::before {
+			background-color: $theme-bg-color-alt-3;
+			transform: rotate(-4deg) scale(1.01);
+		}
+	}
 }
 
 a {

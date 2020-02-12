@@ -32,19 +32,21 @@ export default {
 
 	&__header {
 		height: 60px;
+		background-color: $theme-bg-color-2;
 	}
 }
 
 .content {
 	height: calc(100vh - 60px);
 	overflow-y: scroll;
+	overflow-x: hidden;
 
 	&__wrap {
 		padding: 2rem;
 	}
 
 	&__footer {
-		background-color: $theme-bg-color-alt;
+		background-color: $theme-bg-color-2;
 	}
 }
 </style>
