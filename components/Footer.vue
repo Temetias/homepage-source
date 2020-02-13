@@ -23,15 +23,18 @@
 			/>
 		</div>
 		<span class="copyright">© 2020 Teemu Karppinen</span>
+		<Logo class="logo" />
 	</footer>
 </template>
 
 <script>
 import Social from "~/components/Social.vue";
+import Logo from "~/components/Logo.vue";
 
 export default {
 	components: {
 		Social,
+		Logo,
 	},
 };
 </script>
@@ -42,14 +45,20 @@ export default {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-}
+	padding: 1rem 0;
 
-.socials {
-	display: flex;
+	.socials {
+		display: flex;
+	
+		&__icon {
+			font-size: 2rem;
+			margin: .3rem;
+		}
+	}
 
-	&__icon {
-		font-size: 2rem;
-		margin: .3rem;
+	.logo {
+		width: 5rem;
 	}
 }
+
 </style>

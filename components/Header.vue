@@ -74,9 +74,11 @@ $header-height: 60px;
 	align-items: center;
 	height: $header-height;
 	color: $theme-color-alt;
-	transition: background-color .1s;
+	transition: background-color .2s, box-shadow .2s;
+	box-shadow: $theme-shadow;
 
 	&.not-scrolled {
+		box-shadow: none;
 		background-color: transparent;
 	}
 

@@ -8,6 +8,7 @@ $theme-color: #c1d4dd;
 $theme-color-alt: #ff652f;
 $logo-color: #ff652f;
 $logo-color-alt: #ffe400;
+$theme-shadow: 2px 2px 2px 0px rgba($color: #000000, $alpha: .3);
 
 // Fonts //////
 $theme-font: 'Exo 2', sans-serif;
@@ -49,8 +50,9 @@ p {
 	&:first-child {
 		margin-top: 0;
 	}
-
+	
 	&::after, &::before {
+		box-shadow: $theme-shadow;
 		z-index: -10;
 		pointer-events: none;
 		display: block;
@@ -110,7 +112,6 @@ a {
 	}
 
 	&:hover {
-
 		&::after, &::before {
 			transform: scaleX(1);
 		}
@@ -125,4 +126,5 @@ a.no-underline {
 
 a.no-outline {
 	outline: none;
+	user-select: none;
 }

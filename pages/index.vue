@@ -56,6 +56,7 @@ export default {
 	height: 100vh;
 
 	& > * {
+		margin-top: -120px;
 		max-width: 30vw;
 	}
 
