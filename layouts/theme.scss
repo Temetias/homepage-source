@@ -7,7 +7,7 @@ $theme-bg-color-alt-3: #ff652f;
 $theme-color: #c1d4dd;
 $theme-color-alt: #ff652f;
 $logo-color: #ff652f;
-$logo-color-alt: #ffe400;
+$logo-color-alt: #14a67c;
 $theme-shadow: 2px 2px 2px 0px rgba($color: #000000, $alpha: .3);
 
 // Fonts //////
@@ -30,16 +30,13 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	letter-spacing: 1px;
+	color: $theme-color;
+	font-family: $theme-font;
 }
 
 body {
 	margin: 0;
 	overflow: hidden;
-}
-
-h1, h2, h3, h4, h5, p, span, a {
-	color: $theme-color;
-	font-family: $theme-font;
 }
 
 p {

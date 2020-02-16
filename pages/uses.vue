@@ -11,7 +11,7 @@
 				<h3>Editor</h3>
 				<Li main="VS Code" desc="Looking for lightweight alternatives but pretty much stuck with VSCode."/>
 				<Li main="Fira Code font with ligatures" desc="Can't live without this font anymore. I use it everywhere I can."/>
-				<Li main="Darker + theme" desc="I'm working on a color theme based on darker + but it's still long way to go."/>
+				<Li main="Darker+ -theme" desc="I'm working on a color theme based on darker+ but it's still long way to go."/>
 			</ul>
 		</p>
 		<h2>Personal hardware</h2>
@@ -35,6 +35,8 @@
 				<Li main="Aftermarket large battery"/>
 				<Li main="Linux mint"/>
 			</ul>
+		</p>
+		<p>
 			<ul>
 				<h3>Misc</h3>
 				<Li main="Ducky x Varmilo MIYA-Pro Panda TKL keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
@@ -45,7 +47,7 @@
 		<p>
 			<ul>
 				<h3>Setup</h3>
-				<Li main="Dell xps 13" desc="Docks to rest of my setup via a thunderbolt 3 dock."/>
+				<Li main="Dell xps 13" desc="Docks to rest of the setup via a thunderbolt 3 dock."/>
 				<Li main="Windows 10" desc="Would go Linux but currently need Windows for some projects."/>
 				<Li main="OnePlus 7T PRO"/>
 				<Li main="Logitech MX master, 1080p dell monitor, lift table, etc..." desc="All and all a nice comfy setup to work with. Thanks PG! :)"/>
