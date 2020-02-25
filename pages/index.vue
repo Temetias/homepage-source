@@ -39,6 +39,11 @@
 import Logo from "~/components/Logo.vue";
 
 export default {
+	head() {
+		return {
+			title: "Teemu Karppinen"
+		};
+	},
 	components: {
 		Logo,
 	},

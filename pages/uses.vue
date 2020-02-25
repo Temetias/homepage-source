@@ -3,18 +3,18 @@
 		<header>
 			Following the latest trend where people share their day-to-day setups and gear, here's my
 			<a href="https://uses.tech/">/uses</a> listing. I'm personally not huge into any ecosystem in general.
-			I tend to go for anything that fits my usecase at the time and also have multiple setups I swap between. 
+			I tend to go for anything that fits my usecase at the time and also have multiple setups I swap between.
 		</header>
-		<h2>Software</h2>
+		<h2 id="software">Software</h2>
 		<p>
 			<ul>
 				<h3>Editor</h3>
 				<Li main="VS Code" desc="Looking for lightweight alternatives but pretty much stuck with VSCode."/>
 				<Li main="Fira Code font with ligatures" desc="Can't live without this font anymore. I use it everywhere I can."/>
-				<Li main="Darker+ -theme" desc="I'm working on a color theme based on darker+ but it's still long way to go."/>
+				<Li main="Darker+ theme" desc="I'm working on a color theme based on darker+ but it's still long way to go."/>
 			</ul>
 		</p>
-		<h2>Personal hardware</h2>
+		<h2 id="personal-setup">Personal setup</h2>
 		<p>
 			<ul>
 				<h3>Home PC</h3>
@@ -23,7 +23,7 @@
 				<Li main="AOC 144hz 1080p main monitor"/>
 				<Li main="Samsung 1080p secondary vertical monitor"/>
 				<Li main="Razer deathadder chroma"/>
-				<Li main="Ikea lift table, ikea chair..." desc="Yes, I'm a sucker for Ikea stuff."/>
+				<Li main="Ikea lift table, ikea chair..." desc="Yes, I'm a sucker for that cheap Ikea goodness."/>
 			</ul>
 		</p>
 		<p>
@@ -43,22 +43,16 @@
 				<Li main="Sony WH-1000XM3 noise cancelling headphones"/>
 			</ul>
 		</p>
-		<h2>Work hardware</h2>
+		<h2 id="work-setup">Work setup</h2>
 		<p>
 			<ul>
 				<h3>Setup</h3>
 				<Li main="Dell xps 13" desc="Docks to rest of the setup via a thunderbolt 3 dock."/>
 				<Li main="Windows 10" desc="Would go Linux but currently need Windows for some projects."/>
 				<Li main="OnePlus 7T PRO"/>
-				<Li main="Logitech MX master, 1080p dell monitor, lift table, etc..." desc="All and all a nice comfy setup to work with. Thanks PG! :)"/>
+				<Li main="Logitech MX master, 1080p Dell monitor, lift table, etc..." desc="All and all a nice comfy setup to work with. Thanks PG! :)"/>
 			</ul>
 		</p>
-		<ImageThumb class="image"
-			:openable="true"
-			title="My computer."
-			src="/test-image.jpg"
-			alt="test-image.jpg"
-		/>
 	</main>
 </template>
 
@@ -67,6 +61,11 @@ import ImageThumb from "~/components/ImageThumb.vue";
 import Li from "~/components/Li.vue";
 
 export default {
+	head() {
+		return {
+			title: "Teemu Karppinen /uses"
+		};
+	},
 	components: {
 		ImageThumb,
 		Li,

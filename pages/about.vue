@@ -4,9 +4,9 @@
 			I like climbing and stuff.
 		</p>
 		<ImageThumb class="image"
-			:openable="true"
 			title="Me climbing."
 			src="/test-image.jpg"
+			thumbSrc="/test-image.jpg"
 			alt="test-image.jpg"
 		/>
 	</main>
@@ -16,6 +16,11 @@
 import ImageThumb from "~/components/ImageThumb.vue";
 
 export default {
+	head() {
+		return {
+			title: "Teemu Karppinen /about"
+		};
+	},
 	components: {
 		ImageThumb,
 	},

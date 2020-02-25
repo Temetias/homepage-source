@@ -1,17 +1,16 @@
 <template>
 	<div class="image">
 		<img class="image__displayer"
-			:class="{ 'image__displayer--openable': openable }"
-			@click="handleClick"
-			:src="src"
-			:alt="alt"
+			@click="() => this.showModal = true"
+			:src="thumbSrc"
+			:alt="title"
 			:title="title"
 		/>
 		<ImageModal
 			v-if="showModal"
 			@close="() => showModal = false"
 			:src="src"
-			:alt="alt"
+			:alt="title"
 			:title="title"
 		/>
 	</div>
@@ -30,18 +29,10 @@ export default {
 		ImageModal,
 	},
 	props: [
-		"openable",
+		"thumbSrc",
 		"src",
-		"alt",
 		"title",
 	],
-	methods: {
-		handleClick() {
-			if (this.openable) {
-				this.showModal = true;
-			}
-		}
-	},
 };
 </script>
 
@@ -49,10 +40,7 @@ export default {
 .image {
 	&__displayer {
 		width: 100%;
-
-		&--openable {
-			cursor: pointer;
-		}
+		cursor: pointer;
 	}
 }
 </style>

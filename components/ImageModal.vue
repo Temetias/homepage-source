@@ -9,7 +9,7 @@
 			</i>
 		</header>
 		<img class="image-modal__displayer"
-			:src="src"
+			:src="lazySrc"
 			:alt="alt"
 			@click.stop
 		/>
@@ -23,6 +23,19 @@ export default {
 		"alt",
 		"title",
 	],
+	data() {
+		return {
+			isMounted: false,
+		};
+	},
+	mounted() {
+		this.isMounted = true;
+	},
+	computed: {
+		lazySrc() {
+			return this.isMounted ? this.src : "";
+		},
+	},
 };
 </script>
 

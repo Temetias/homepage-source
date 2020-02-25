@@ -16,7 +16,7 @@ module.exports = {
       { name: "theme-color", content: "#f0361d" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' },
       { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Exo+2&display=swap" },
     ]
@@ -54,7 +54,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
