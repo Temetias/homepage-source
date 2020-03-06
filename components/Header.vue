@@ -73,9 +73,10 @@ $header-height: 60px;
 	justify-content: space-between;
 	align-items: center;
 	height: $header-height;
-	color: $theme-color-alt;
+	color: $theme-color-5;
 	transition: background-color .2s, box-shadow .2s;
 	box-shadow: $theme-shadow;
+	margin-bottom: 4px;
 
 	&.not-scrolled {
 		box-shadow: none;
@@ -150,11 +151,11 @@ $header-height: 60px;
 
 		&__region {
 			width: 100%;
-			background-color: $theme-bg-color-alt;
-			z-index: 10;
+			background-color: $theme-color-2;
+			z-index: 20;
 
 			&--small-screen-left {
-				z-index: 20;
+				z-index: 30;
 				flex-direction: row;
 			}
 		}
@@ -168,8 +169,13 @@ $header-height: 60px;
 		position: fixed;
 		top: $header-height;
 		height: 2rem;
-		justify-content: center;
+		justify-content: space-evenly;
 		transition: transform .2s;
+		box-shadow: $theme-shadow;
+
+		&__item {
+			padding: .5rem;
+		}
 
 		* {
 			transition: opacity .15s;

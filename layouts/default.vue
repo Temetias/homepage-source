@@ -3,10 +3,10 @@
 		<Header class="layout__header" />
 		<div class="layout__content content"
 			id="main-content">
+			<Footer class="footer"/>
 			<div class="content__wrap">
-				<nuxt />
+				<nuxt class="content__main"/>
 			</div>
-			<Footer class="content__footer"/>
 		</div>
 	</div>
 </template>
@@ -32,7 +32,8 @@ export default {
 
 	&__header {
 		height: 60px;
-		background-color: $theme-bg-color-2;
+		background-color: $theme-color-2;
+		box-shadow: $theme-shadow;
 	}
 }
 
@@ -42,11 +43,24 @@ export default {
 	overflow-x: hidden;
 
 	&__wrap {
+		background: linear-gradient($theme-color-1, $theme-color-1);
 		padding: 2rem;
-	}
+		margin-bottom: 30vh;
+		box-shadow: $theme-shadow;
 
-	&__footer {
-		background-color: $theme-bg-color-2;
+		p {
+			z-index: 10;
+		}
 	}
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 30vh;
+	background-color: $theme-color-2;
+	z-index: -10;
 }
 </style>

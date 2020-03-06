@@ -14,8 +14,9 @@
 				but also take interest in other kinds of development as well.
 			</p>
 			<p>
-				Currently, my title is Lead Developer in a company creating web-based industrial IOT-platforms.
-				My main skills professionally are <a href="https://www.typescriptlang.org/">TypeScript</a>,
+				Currently, my title is Lead Developer at <a href="https://www.processgenius.fi/">Process Genius</a>,
+				a company creating 3D industrial IOT-platforms on the web. My main skills professionally are
+				<a href="https://www.typescriptlang.org/">TypeScript</a>,
 				<a href="https://www.javascript.com/">JavaScript</a>, <a href="https://vuejs.org/">Vue.js</a>,
 				<a href="https://nodejs.org/en/">Node.js</a>, <a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP</a>
 				and <a href="https://sass-lang.com/">SASS</a>. On my spare time I dabble into <a href="https://www.haskell.org/">Haskell</a>.
