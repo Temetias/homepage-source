@@ -51,6 +51,7 @@ export default {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	z-index: 20;
 
 	&__header {
 		width: 90%;

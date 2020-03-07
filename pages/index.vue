@@ -66,12 +66,42 @@ export default {
 		max-width: 30vw;
 	}
 
+	&__text-wrapper {
+		max-width: 50vw;
+	}
+
 	h2 {
 		font-size: 2.2rem;
 	}
 
 	.logo {
 		width: 50vw;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	.landing-header {
+		&__text-wrapper {
+			max-width: 50vw;
+		}
+		
+		.logo {
+			width: 30vw;
+		}
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.landing-header {
+		flex-direction: column;
+
+		.logo {
+			width: 60vw;
+		}
+
+		& > * {
+			max-width: 95vw;
+		}
 	}
 }
 </style>

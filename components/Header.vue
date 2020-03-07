@@ -57,7 +57,7 @@ export default {
 	},
 	computed: {
 		scrollTrigger() {
-			return window.innerHeight / 3 > this.lastScroll;
+			return window.innerHeight / 4 > this.lastScroll;
 		}
 	}
 };
@@ -77,6 +77,7 @@ $header-height: 60px;
 	transition: background-color .2s, box-shadow .2s;
 	box-shadow: $theme-shadow;
 	margin-bottom: 4px;
+	background-color: $theme-color-3;
 
 	&.not-scrolled {
 		box-shadow: none;
@@ -148,10 +149,11 @@ $header-height: 60px;
 	.header {
 		flex-direction: column;
 		height: auto;
+		box-shadow: none;
 
 		&__region {
 			width: 100%;
-			background-color: $theme-color-2;
+			background-color: $theme-color-3;
 			z-index: 20;
 
 			&--small-screen-left {
@@ -178,14 +180,14 @@ $header-height: 60px;
 		}
 
 		* {
-			transition: opacity .15s;
+			transition: opacity .1s;
 			opacity: 1;
 		}
 
 		&.scrolling-down {
 			transform: translateY(-100%);
 			
-			* {
+			> * {
 				opacity: 0;
 			}
 		}
