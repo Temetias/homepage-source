@@ -8,36 +8,54 @@
 			</div>
 		</header>
 		<section>
-			<p>
-				My name is Teemu Karppinen and I'm a full stack developer from Joensuu, Finland.
-				I'm passionate about the software industry and creating amazing stuff with code. I'm mainly a web developer,
-				but also take interest in other kinds of development as well.
-			</p>
-			<p>
-				Currently, my title is Lead Developer at <a href="https://www.processgenius.fi/">Process Genius</a>,
-				a company creating 3D industrial IOT-platforms on the web. My main skills professionally are
-				<a href="https://www.typescriptlang.org/">TypeScript</a>,
-				<a href="https://www.javascript.com/">JavaScript</a>, <a href="https://vuejs.org/">Vue.js</a>,
-				<a href="https://nodejs.org/en/">Node.js</a>, <a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP</a>
-				and <a href="https://sass-lang.com/">SASS</a>. On my spare time I dabble into <a href="https://www.haskell.org/">Haskell</a>.
-			</p>
-			<p>
-				I'm enthusiastic about building and exploring solutions that are clean, maintainable and state-of-the-art
-				pieces of software. I belive in using the right tools for the job and not half-assing tasks. My biggest fear is getting
-				stuck with "a comfortable but outdated way of doing things" instead of being ready to go out of my comfort zone. Therefore, I
-				continuosly take effort of staying in touch with the latest things in the industry.
-			</p>
-			<p>
-				I can also manage myself in the business side of things, and have experience about working in the pre-project phase
-				even with big companies, internationally. I'd go even as far to say I'm comfortable working in close synergy with the sales,
-				and possibly be the translator between the dev-team and the client.
-			</p>
+			<div class="responsive-row">
+				<Box :image="true">
+					<ImageThumb
+						title="Thats' me."
+						src="/me2.jpg"
+						thumbSrc="/me2.jpg"
+						alt="me2.jpg"
+					/>
+				</Box>
+				<Box>
+					<p>
+						My name is Teemu Karppinen and I'm a full stack developer from Joensuu, Finland.
+						I'm passionate about the software industry and creating amazing stuff with code. I'm mainly a web developer,
+						but also take interest in other kinds of development as well.
+						<br>
+						<br>
+						Currently, my title is Lead Developer at <a href="https://www.processgenius.fi/">Process Genius</a>,
+						a company creating 3D industrial IOT-platforms on the web. My main skills professionally are
+						<a href="https://www.typescriptlang.org/">TypeScript</a>,
+						<a href="https://www.javascript.com/">JavaScript</a>, <a href="https://vuejs.org/">Vue.js</a>,
+						<a href="https://nodejs.org/en/">Node.js</a>, <a href="https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP</a>
+						and <a href="https://sass-lang.com/">SASS</a>. On my spare time I dabble into <a href="https://www.haskell.org/">Haskell</a>.
+					</p>
+				</Box>
+			</div>
+			<Box>
+				<p>
+					I'm enthusiastic about building and exploring solutions that are clean, maintainable and state-of-the-art
+					pieces of software. I belive in using the right tools for the job and not half-assing tasks. My biggest fear is getting
+					stuck with "a comfortable but outdated way of doing things" instead of being ready to go out of my comfort zone. Therefore, I
+					continuosly take effort of staying in touch with the latest things in the industry.
+				</p>
+			</Box>
+			<Box>
+				<p>
+					I can also manage myself in the business side of things, and have experience about working in the pre-project phase
+					even with big companies, internationally. I'd go even as far to say I'm comfortable working in close synergy with the sales,
+					and possibly be the translator between the dev-team and the client.
+				</p>
+			</Box>
 		</section>
 	</main>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
+import Box from "~/components/Box.vue";
+import ImageThumb from "~/components/ImageThumb.vue";
 
 export default {
 	head() {
@@ -47,6 +65,8 @@ export default {
 	},
 	components: {
 		Logo,
+		Box,
+		ImageThumb,
 	},
 };
 </script>
@@ -79,7 +99,7 @@ export default {
 	}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $screen-tablet) {
 	.landing-header {
 		&__text-wrapper {
 			max-width: 50vw;
@@ -91,9 +111,10 @@ export default {
 	}
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: $screen-mobile) {
 	.landing-header {
 		flex-direction: column;
+		padding: 0 1rem;
 
 		.logo {
 			width: 60vw;

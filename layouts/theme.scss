@@ -2,7 +2,7 @@
 $theme-color-1: #daf5ff;
 //$theme-color-2: #d9effa;
 $theme-color-3: #dbecff;
-$theme-color-4: #197579;
+$theme-color-4: #05639e;
 $theme-color-5: #ff2fba;
 $theme-shadow: 2px 2px 3px 0px rgba($color: #000000, $alpha: .2);
 
@@ -10,6 +10,10 @@ $theme-text-color: #414c52;
 
 // Fonts //////
 $theme-font: 'Exo 2', sans-serif;
+
+// Media queries ////
+$screen-mobile: 475px;
+$screen-tablet: 640px;
 
 // Theme //////
 html {
@@ -37,48 +41,6 @@ body {
 	overflow: hidden;
 }
 
-p {
-	position: relative;
-	margin: 10rem 0;
-	margin-left: 40vw;
-
-	&:first-child {
-		margin-top: 0;
-	}
-	
-	&::after, &::before {
-		box-shadow: $theme-shadow;
-		z-index: -10;
-		pointer-events: none;
-		display: block;
-		content: "";
-		position: absolute;
-		top: 0; left: 0; right: 0; bottom: 0;
-		background-color: $theme-color-3;
-		margin: -2rem;
-		transform: rotate(1deg);
-	}
-	
-	&::before {
-		background-color: $theme-color-4;
-		transform: rotate(4deg) scale(1.01);
-	}
-
-	&:nth-child(odd) {
-		margin-left: 0;
-		margin-right: 40vw;
-
-		&::after {
-			transform: rotate(-1deg);
-		}
-
-		&::before {
-			background-color: $theme-color-5;
-			transform: rotate(-4deg) scale(1.01);
-		}
-	}
-}
-
 @media only screen and (max-width: 475px) {
 	p {
 		margin-left: 9vw;
@@ -95,6 +57,7 @@ a {
 	color: $theme-color-5;
 	text-decoration: none;
 	position: relative;
+	white-space: nowrap;
 
 	&::after, &::before {
 		display: block;
@@ -134,4 +97,34 @@ a.no-underline {
 a.no-outline {
 	outline: none;
 	user-select: none;
+}
+
+.responsive-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10vh;
+
+	& > .box {
+		margin: 0;
+		flex: 1;
+
+		&:first-child {
+			margin-right: 3vw;
+		}
+	}
+}
+
+@media only screen and (max-width: $screen-tablet) {
+	.responsive-row {
+		flex-direction: column;
+
+		& > .box {
+			margin: 0 0 2vh 0;
+	
+			&:first-child {
+				margin-right: 0;
+			}
+		}
+	}
 }

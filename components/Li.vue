@@ -17,6 +17,6 @@ li {
 }
 
 span {
-	opacity: .5;
+	opacity: .7;
 }
 </style>

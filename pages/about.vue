@@ -28,7 +28,5 @@ export default {
 </script>
 
 <style lang="scss">
-.image {
-	width: 30vw;
-}
+
 </style>

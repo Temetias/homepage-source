@@ -6,16 +6,26 @@
 			I tend to go for anything that fits my usecase at the time and also have multiple setups I swap between.
 		</header>
 		<h2 id="software">Software</h2>
-		<p>
-			<ul>
-				<h3>Editor</h3>
-				<Li main="VS Code" desc="Looking for lightweight alternatives but pretty much stuck with VSCode."/>
-				<Li main="Fira Code font with ligatures" desc="Can't live without this font anymore. I use it everywhere I can."/>
-				<Li main="Darker+ theme" desc="I'm working on a color theme based on darker+ but it's still long way to go."/>
-			</ul>
-		</p>
+		<div class="responsive-row">
+			<Box>
+				<ul>
+					<h3>Editor</h3>
+					<Li main="VS Code" desc="Looking for lightweight alternatives but pretty much stuck with VSCode."/>
+					<Li main="Fira Code font with ligatures" desc="Can't live without this font anymore. I use it everywhere I can."/>
+					<Li main="Darker+ theme" desc="I'm working on a color theme based on darker+ but it's still long way to go."/>
+				</ul>
+			</Box>
+			<Box :image="true">
+				<ImageThumb
+					title="Some code on a dirty screen."
+					src="code.jpg"
+					thumbSrc="code.jpg"
+					alt="code.jpg"
+				/>
+			</Box>
+		</div>
 		<h2 id="personal-setup">Personal setup</h2>
-		<p>
+		<Box>
 			<ul>
 				<h3>Home PC</h3>
 				<Li main="System build from scratch" desc="Overclocked 4690k, 1660ti, 16gb ram, etc... Nothing fancy but get's the job done."/>
@@ -25,8 +35,8 @@
 				<Li main="Razer deathadder chroma"/>
 				<Li main="Ikea lift table, ikea chair..." desc="Yes, I'm a sucker for that cheap Ikea goodness."/>
 			</ul>
-		</p>
-		<p>
+		</Box>
+		<Box>
 			<ul>
 				<h3>Laptop</h3>
 				<Li main="Lenovo ThinkPad x230" desc="Bought secondhand from some corporation."/>
@@ -35,30 +45,21 @@
 				<Li main="Aftermarket large battery"/>
 				<Li main="Linux mint"/>
 			</ul>
-		</p>
-		<p>
+		</Box>
+		<Box>
 			<ul>
 				<h3>Misc</h3>
 				<Li main="Ducky x Varmilo MIYA-Pro Panda TKL keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
 				<Li main="Sony WH-1000XM3 noise cancelling headphones"/>
 			</ul>
-		</p>
-		<h2 id="work-setup">Work setup</h2>
-		<p>
-			<ul>
-				<h3>Setup</h3>
-				<Li main="Dell xps 13" desc="Docks to rest of the setup via a thunderbolt 3 dock."/>
-				<Li main="Windows 10" desc="Would go Linux but currently need Windows for some projects."/>
-				<Li main="OnePlus 7T PRO"/>
-				<Li main="Logitech MX master, 1080p Dell monitor, lift table, etc..." desc="All and all a nice comfy setup to work with. Thanks PG! :)"/>
-			</ul>
-		</p>
+		</Box>
 	</main>
 </template>
 
 <script>
 import ImageThumb from "~/components/ImageThumb.vue";
 import Li from "~/components/Li.vue";
+import Box from "~/components/Box.vue";
 
 export default {
 	head() {
@@ -68,6 +69,7 @@ export default {
 	},
 	components: {
 		ImageThumb,
+		Box,
 		Li,
 	},
 };
@@ -75,6 +77,10 @@ export default {
 
 <style lang="scss">
 @import "@/layouts/theme.scss";
+
+main header {
+	padding: 10rem 0;
+}
 
 ul {
 	h3 {

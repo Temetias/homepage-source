@@ -20,13 +20,13 @@
 		<nav class="header__region nav"
 			:class="{ 'scrolling-down': scrollingDown }"
 			ref="nav">
-			<nuxt-link class="nav__item nav__item--only-small no-outline"
-				to="/">
-				Home
-			</nuxt-link>
 			<nuxt-link class="nav__item no-outline"
 				to="/about">
 				About
+			</nuxt-link>
+			<nuxt-link class="nav__item no-outline"
+				to="/projects">
+				Projects
 			</nuxt-link>
 			<nuxt-link class="nav__item no-outline"
 				to="/uses">
@@ -122,14 +122,10 @@ $header-height: 60px;
 		align-items: center;
 		height: 100%;
 		padding: .5rem 2rem;
-
-		&--only-small {
-			display: none;
-		}
 	}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: $screen-tablet) {
 	.header {
 		.home-link {
 			display: none;
@@ -145,7 +141,7 @@ $header-height: 60px;
 	}
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: $screen-mobile) {
 	.header {
 		flex-direction: column;
 		height: auto;

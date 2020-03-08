@@ -48,15 +48,23 @@ export default {
 		padding: 2rem;
 		box-shadow: $theme-shadow;
 		background-color: $theme-color-1;
-
-		p {
-			z-index: 10;
-		}
 	}
 
 	&__padder {
 		height: 30vh;
 		pointer-events: none;
+	}
+}
+
+@media only screen and (max-width: $screen-tablet) {
+	.content__wrap {
+		padding: 2rem 1.5rem;
+	}
+}
+
+@media only screen and (max-width: $screen-mobile) {
+	.content__wrap {
+		padding: 2rem .5rem;
 	}
 }
 
