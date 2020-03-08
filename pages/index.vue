@@ -11,7 +11,7 @@
 			<div class="responsive-row">
 				<Box :image="true">
 					<ImageThumb
-						title="Thats' me."
+						title="That's me."
 						src="/me2.jpg"
 						thumbSrc="/me2.jpg"
 						alt="me2.jpg"

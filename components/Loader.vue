@@ -5,12 +5,13 @@
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "@/layouts/theme.scss";
 
 .loader {
 	height: .3rem;
 	display: flex;
+	align-items: center;
 
 	&__1 {
 		flex: 1;

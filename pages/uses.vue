@@ -1,8 +1,10 @@
 <template>
-	<main>
+	<main class="uses">
 		<header>
 			Following the latest trend where people share their day-to-day setups and gear, here's my
-			<a href="https://uses.tech/">/uses</a> listing. I'm personally not huge into any ecosystem in general.
+			<a href="https://uses.tech/">/uses</a> listing.
+			<br><br>
+			I'm personally not huge into any ecosystem in general.
 			I tend to go for anything that fits my usecase at the time and also have multiple setups I swap between.
 		</header>
 		<h2 id="software">Software</h2>
@@ -24,7 +26,7 @@
 				/>
 			</Box>
 		</div>
-		<h2 id="personal-setup">Personal setup</h2>
+		<h2 id="hardware">Hardware</h2>
 		<Box>
 			<ul>
 				<h3>Home PC</h3>
@@ -49,7 +51,7 @@
 		<Box>
 			<ul>
 				<h3>Misc</h3>
-				<Li main="Ducky x Varmilo MIYA-Pro Panda TKL keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
+				<Li main="Ducky x Varmilo MIYA-Pro Panda 65% keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
 				<Li main="Sony WH-1000XM3 noise cancelling headphones"/>
 			</ul>
 		</Box>
@@ -78,7 +80,7 @@ export default {
 <style lang="scss">
 @import "@/layouts/theme.scss";
 
-main header {
+.uses header {
 	padding: 10rem 0;
 	font-size: 1.5rem;
 }

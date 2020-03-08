@@ -1,5 +1,5 @@
 <template>
-	<li>{{ main }}<br><span>{{ desc }}</span></li>	
+	<li class="li">{{ main }}<br><span class="li__span">{{ desc }}</span></li>	
 </template>
 
 <script>
@@ -11,12 +11,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-li {
+<style lang="scss">
+.li {
 	margin-bottom: .5rem;
+	
+	&__span {
+		opacity: .7;
+	}
 }
 
-span {
-	opacity: .7;
-}
 </style>

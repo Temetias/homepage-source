@@ -4,11 +4,13 @@
 
 		</header>
 		<section class="async-section">
-			<Loader v-if="!projects.length"/>
+			<Loader class="async-section__loader"
+				v-if="!projects.length"
+			/>
 			<Box v-for="project in projects"
 				:key="project.name">
 				<div class="project">
-					<h3>{{ project.name }}</h3>
+					<h3 :id="project.name">{{ project.name }}</h3>
 					<p>{{ project.info }}</p>
 					<div class="project__footer">
 						<a :href="'https://github.com/Temetias/' + project.name">Github</a>
@@ -38,7 +40,7 @@ export default {
 			projects: [],
 		};
 	},
-	mounted() {
+	created() {
 		fetch("https://api.github.com/users/Temetias/repos")
 			.then(response => response.json())
 				.catch(console.error)
@@ -50,7 +52,6 @@ export default {
 							.then(rawInfo => {
 								if (rawInfo.indexOf("404: Not Found") === -1) {
 									const info = rawInfo.split("#link#")[0];
-									console.log(rawInfo.split("#link#")[1])
 									this.projects.push({ name, info, links: [ JSON.parse(rawInfo.split("#link#")[1]) ] });
 								}
 							});
@@ -59,3 +60,11 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+.async-section {
+	&__loader {
+		min-height: 100vh;
+	}
+}
+</style>
