@@ -92,6 +92,7 @@ export default {
 
 	h2 {
 		font-size: 2.2rem;
+		margin: 0;
 	}
 
 	.logo {

@@ -41,16 +41,8 @@ body {
 	overflow: hidden;
 }
 
-@media only screen and (max-width: 475px) {
-	p {
-		margin-left: 9vw;
-		margin-right: 3vw;
-
-		&:nth-child(odd) {
-			margin-left: 3vw;
-			margin-right: 9vw;
-		}
-	}
+h2 {
+	margin-bottom: 2rem;
 }
 
 a {

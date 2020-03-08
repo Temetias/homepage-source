@@ -80,6 +80,7 @@ export default {
 
 main header {
 	padding: 10rem 0;
+	font-size: 1.5rem;
 }
 
 ul {
