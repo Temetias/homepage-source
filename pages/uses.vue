@@ -27,17 +27,27 @@
 			</Box>
 		</div>
 		<h2 id="hardware">Hardware</h2>
-		<Box>
-			<ul>
-				<h3>Home PC</h3>
-				<Li main="System build from scratch" desc="Overclocked 4690k, 1660ti, 16gb ram, etc... Nothing fancy but get's the job done."/>
-				<Li main="Linux Ubuntu / Windows 10 dual boot setup" desc="Windows for gaming, Ubuntu for productivity."/>
-				<Li main="AOC 144hz 1080p main monitor"/>
-				<Li main="Samsung 1080p secondary vertical monitor"/>
-				<Li main="Razer deathadder chroma"/>
-				<Li main="Ikea lift table, ikea chair..." desc="Yes, I'm a sucker for that cheap Ikea goodness."/>
-			</ul>
-		</Box>
+		<div class="responsive-row">
+			<Box :image="true">
+				<ImageThumb
+					title="My setup."
+					src="setup.jpg"
+					thumbSrc="setup.jpg"
+					alt="setup.jpg"
+				/>
+			</Box>
+			<Box>
+				<ul>
+					<h3>Home PC</h3>
+					<Li main="System built from scratch" desc="Overclocked 4690k, 1660ti, 16gb ram, etc... Nothing fancy but get's the job done."/>
+					<Li main="Linux Ubuntu / Windows 10 dual boot setup" desc="Windows for gaming, Ubuntu for productivity."/>
+					<Li main="AOC 144hz 1080p main monitor"/>
+					<Li main="Samsung 1080p secondary vertical monitor"/>
+					<Li main="Razer deathadder chroma"/>
+					<Li main="Ikea lift table, ikea chair..." desc="Yes, I'm a sucker for that cheap Ikea goodness."/>
+				</ul>
+			</Box>
+		</div>
 		<Box>
 			<ul>
 				<h3>Laptop</h3>
@@ -48,13 +58,23 @@
 				<Li main="Linux mint"/>
 			</ul>
 		</Box>
-		<Box>
-			<ul>
-				<h3>Misc</h3>
-				<Li main="Ducky x Varmilo MIYA-Pro Panda 65% keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
-				<Li main="Sony WH-1000XM3 noise cancelling headphones"/>
-			</ul>
-		</Box>
+		<div class="responsive-row">
+			<Box>
+				<ul>
+					<h3>Misc</h3>
+					<Li main="Ducky x Varmilo MIYA-Pro Panda 65% keyboard" desc="This thing goes everywhere with me. I carry it to work and back everyday."/>
+					<Li main="Sony WH-1000XM3 noise cancelling headphones"/>
+				</ul>
+			</Box>
+			<Box :image="true">
+				<ImageThumb
+					title="Panda keys."
+					src="kbd.jpg"
+					thumbSrc="kbd.jpg"
+					alt="kbd.jpg"
+				/>
+			</Box>
+		</div>
 	</main>
 </template>
 
@@ -83,6 +103,13 @@ export default {
 .uses header {
 	padding: 10rem 0;
 	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: $screen-mobile) {
+	.uses header {
+		padding: 0 0 5rem 0;
+		font-size: 1.3rem;
+	}
 }
 
 ul {

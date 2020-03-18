@@ -65,9 +65,18 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/layouts/theme.scss";
+
 .projects header {
 	padding: 10rem 0;
 	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: $screen-mobile) {
+	.projects header {
+		padding: 0 0 5rem 0;
+		font-size: 1.3rem;
+	}
 }
 
 .async-section {

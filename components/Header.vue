@@ -1,6 +1,5 @@
 <template>
-	<header class="header"
-		:class="{ 'not-scrolled': scrollTrigger }">
+	<header class="header">
 		<div class="
 			header__region
 			header__region--flip
@@ -43,23 +42,6 @@ export default {
 	components: {
 		Logo,
 	},
-	data() {
-		return {
-			lastScroll: 0,
-			scrollingDown: false,
-		};
-	},
-	mounted() {
-		document.getElementById("main-content").onscroll = ({ target }) => {
-			this.scrollingDown = this.lastScroll < target.scrollTop;
-			this.lastScroll = target.scrollTop;
-		};
-	},
-	computed: {
-		scrollTrigger() {
-			return window.innerHeight / 4 > this.lastScroll;
-		},
-	},
 };
 </script>
 
@@ -72,7 +54,6 @@ $header-height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: $header-height;
 	color: $theme-color-5;
 	transition: background-color .2s, box-shadow .2s;
 	box-shadow: $theme-shadow;
@@ -143,49 +124,16 @@ $header-height: 60px;
 
 @media only screen and (max-width: $screen-mobile) {
 	.header {
-		flex-direction: column;
-		height: auto;
-		box-shadow: none;
-
-		&__region {
-			width: 100%;
-			background-color: $theme-color-3;
-			z-index: 20;
-
-			&--small-screen-left {
-				z-index: 30;
-				flex-direction: row;
-			}
-		}
-
 		.home-link {
 			display: none;
 		}
 	}
 
 	.nav {
-		position: fixed;
-		top: $header-height;
-		height: 2rem;
-		justify-content: space-evenly;
-		transition: transform .2s;
-		box-shadow: $theme-shadow;
-
 		&__item {
-			padding: .5rem;
-		}
-
-		* {
-			transition: opacity .1s;
-			opacity: 1;
-		}
-
-		&.scrolling-down {
-			transform: translateY(-100%);
-			
-			> * {
-				opacity: 0;
-			}
+			font-size: .9rem;
+			padding: 0 .4rem;
+			margin: 0 .3rem;
 		}
 	}
 }
