@@ -21,6 +21,13 @@ export default {
 		Header,
 		Footer,
 	},
+	head() {
+		return {
+			meta: [
+				{ hid: "theme-color", name: "theme-color", content: "#dbecff" },
+			],
+		};
+	},
 };
 </script>
 

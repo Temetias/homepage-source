@@ -110,6 +110,7 @@ a.no-outline {
 @media only screen and (max-width: $screen-tablet) {
 	.responsive-row {
 		flex-direction: column;
+		margin-bottom: 0;
 
 		& > .box {
 			margin: 0 0 2vh 0;

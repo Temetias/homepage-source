@@ -58,8 +58,8 @@ export default {
 	computed: {
 		scrollTrigger() {
 			return window.innerHeight / 4 > this.lastScroll;
-		}
-	}
+		},
+	},
 };
 </script>
 

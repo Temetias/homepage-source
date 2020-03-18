@@ -1,7 +1,10 @@
 <template>
-	<main>
+	<main class="projects">
 		<header>
-
+			Here you can find some highlights of my personal projects. Large part of my freetime coding goes
+			into learning new stuff, or working on private projects so this list isn't anything spectacular.
+			<br><br>
+			There are still some worth showing so go ahead and check them out!
 		</header>
 		<section class="async-section">
 			<Loader class="async-section__loader"
@@ -62,6 +65,11 @@ export default {
 </script>
 
 <style lang="scss">
+.projects header {
+	padding: 10rem 0;
+	font-size: 1.5rem;
+}
+
 .async-section {
 	&__loader {
 		min-height: 100vh;

@@ -60,7 +60,10 @@ import ImageThumb from "~/components/ImageThumb.vue";
 export default {
 	head() {
 		return {
-			title: "Teemu Karppinen"
+			title: "Teemu Karppinen",
+			meta: [
+				{ hid: "theme-color", name: "theme-color", content: "#dbecff" },
+			],
 		};
 	},
 	components: {
